@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{ 
+  width: 0px;
+}
+
+.navbar {
+  background: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+.banner-image-container {
+position: absolute;
+  top: 0px;
+  background-attachment: fixed;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+    transform: translateY(-20px); /* Move the title up by 20px */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move the title back to its original position */
+  }
+}
+
+.banner-text p {
+  animation: fadeIn 1.5s ease-in-out; 
+}
+
+.top-page-container {
+  height: 100vh;
+  background-image: url(images/banner3.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navbar-banner {
+  position: fixed;
+  z-index: 100;
+}
+.home-row {
+  animation: fadeIn 1.5s ease-in-out; 
+}
+
+.home-collection-container {
+  background-color: rgba(0, 0, 0, 0.838);
+}
+
+.gender-container{
+  background-image: url(images/banner1.jpg);
+  background-size: cover;
+}
