@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
 
 body {
   box-sizing: border-box;
   margin: 0px;
   overflow-x: hidden;
+  background-color: black;
 }
 
 body::-webkit-scrollbar{ 
@@ -24,7 +29,7 @@ position: absolute;
   background-attachment: fixed;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInY {
   from {
     opacity: 0.3;
     transform: translateY(-20px); /* Move the title up by 20px */
@@ -35,8 +40,39 @@ position: absolute;
   }
 }
 
+@keyframes fadeInXR {
+  0% {
+    opacity: 0.3;
+    transform: translateX(40px); /* Move the title up by 20px */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Move the title back to its original position */
+  }
+}
+
+@keyframes fadeInXL {
+  from {
+    opacity: 0.3;
+    transform: translateX(-40px); /* Move the title up by 20px */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move the title back to its original position */
+  }
+}
+
+.fade-text-left {
+  animation: fadeInXL 1.5s ease-in-out;
+}
+
+.fade-text-top {
+  animation: fadeInY 1.5s ease-in-out;
+}
+
+
 .banner-text p {
-  animation: fadeIn 1.5s ease-in-out; 
+  animation: fadeInY 1.5s ease-in-out; 
 }
 
 .top-page-container {
@@ -58,7 +94,174 @@ position: absolute;
   background-color: rgba(0, 0, 0, 0.838);
 }
 
-.gender-container{
-  background-image: url(images/banner1.jpg);
+
+
+/* .f-product:hover {
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 5px;
+  width: 22rem;
+  z-index: 10;
+  position:relative;
+} */
+
+.f-product {
+  transition: transform 0.3s, box-shadow 0.1s;
+}
+
+.f-product:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  /* box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 0px 5px; */
+ }
+
+.nav-item:hover{
+  box-shadow: rgba(149, 157, 165, 0.5 ) 0px px 44px;
+}
+
+
+.bn3637 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  backface-visibility: hidden;
+  border: 0.1rem solid transparent;
+  border-radius: 3rem;
+}
+
+.bn36 {
+  border-color: #ffffff;
+  transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+
+.bn36:hover {
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+  background-color: #ffffff;
+  color: black;
+  transition: background-color 0.3s;
+}
+
+
+
+.over-shirt {
+  background-image: url(https://www.snitch.co.in/cdn/shop/files/4MSK8580-03-M22.jpg?v=1712042382&width=1800);
+}
+
+
+
+
+.scroll-container::-webkit-scrollbar{ 
+  width: 0px;
+}
+
+.scroll-container  p{
+  flex: none;
+}
+
+.essentials {
+  background-image: url(https://www.snitch.co.in/cdn/shop/files/4MST2237-05-M19.jpg?v=1705920327&width=1800);
   background-size: cover;
+}
+
+.oversized {
+  background-image: url(https://www.snitch.co.in/cdn/shop/products/Snitch_23Oct21_2003.jpg?v=1666120853&width=1800);
+  background-size: cover;
+}
+
+.cargos {
+  background-image: url(https://www.snitch.co.in/cdn/shop/files/4MSO4556-03-3258.jpg?v=1706188538&width=1800);
+  background-size: cover;
+}
+
+.chinos {
+  background-image: url(https://www.snitch.co.in/cdn/shop/files/4MSC4011-05-3211.jpg?v=1710399720&width=1800);
+  background-size: cover;
+}
+
+.seasonal-type {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+ 
+}
+
+.seasonal-card {
+  transition: transform 0.3s , box-shadow 0.3s ;
+}
+
+.seasonal-card:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.category-container {
+  height: 30vh;
+}
+
+.category {
+  border-radius: 50%;
+  transition: font-size 0.3s , line-height 0.3s;
+}
+
+.category:hover{
+  font-size: 1.5rem/* 24px */;
+  line-height: 2rem/* 32px */;
+}
+
+  .signature-bg {
+    background-image: url(/images/signature-bg_processed.jpg);   
+    background-size: cover;
+  }
+
+  .signature-bg-animation {
+    animation: fadeInXR 1.5s ease-in-out;
+  }
+
+.branded{
+  background-image: url(images/sp-Photoroom.png);
+  background-size: cover;
+  perspective-origin: 1000% -100%;
+}
+
+.luxury {
+  background-image: url(images/white-shirt.jpg);
+  background-size: cover;
+}
+
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+}
+
+.luxury-text {
+  animation: fadeInY 1.5s ease-in-out;
+}
+
+.add-product {
+  background-color: rgba(0, 0, 0, 0.555);
+}
+
+.add-product-container  form  label  input {
+  margin-left: 1.5rem;
+}
+
+.add-product-input:focus {
+  border: 3px solid rgb(214, 41, 41);
+}
+
+.register {
+  height: 80vh;
+}
+
+.register-container {
+  background-color: #00000000;
+}
+
+.register-page {
+  background-image: url(../images/dark-bg.jpg);
 }
