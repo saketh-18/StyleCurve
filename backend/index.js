@@ -11,7 +11,36 @@ app.use(bodyParser.json());
 
 const port = 5000;
 
-app.use(cors({credentials : true , origin : "http://localhost:5173"}));
+// app.use(cors({credentials : true , origin : "http://localhost:5173"}));
+const corsOptions = {
+    origin: ['http://localhost:5173', 'https://style-curve-4wnucb9sp-sakeths-projects-dbd1767a.vercel.app' , 'https://style-curve-git-master-sakeths-projects-dbd1767a.vercel.app/' , 'style-curve.vercel.app'],
+    credentials: true // You may need to set this if you're using cookies or sessions
+};
+
+app.use(cors(corsOptions));
+
+app.use((req, res, next) => {
+    const allowedOrigins = [
+        'http://localhost:5173',
+        'https://style-curve-4wnucb9sp-sakeths-projects-dbd1767a.vercel.app',
+        'https://style-curve-git-master-sakeths-projects-dbd1767a.vercel.app/' , 
+        'style-curve.vercel.app'
+        
+        // Add more origins as needed
+    ];
+
+    const origin = req.headers.origin;
+
+    if (allowedOrigins.includes(origin)) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+    }
+
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
+
 
 // mongoose.connect("mongodb://localhost:27017/StyleCurve").then(() => {
 //     console.log("connected to database");
