@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "661007af58f99d7bba1c641e",
+    "title": "Black Chinos",
+    "price": 1499,
+    "rating": 5,
+    "image": "https://www.snitch.co.in/cdn/shop/files/4MSC4011-05-3211.jpg?v=1710399720&width=1800",
+    "type": "chinos",
+    "gender": "male",
+    "__v": 0
+  },
+  {
+    "_id": "661010d380e77e206fadf3e4",
+    "title": "LONDON PINK OVERSIZED T-SHIRT",
+    "price": 899,
+    "rating": 5,
+    "type": "t-shirt",
+    "gender": "male",
+    "image": "https://www.snitch.co.in/cdn/shop/products/Snitch_23Oct21_2003.jpg?v=1666120853&width=1800",
+    "__v": 0
+  },
+  {
+    "_id": "661011b080e77e206fadf3e7",
+    "title": "SOLITUDE GREY OVERSIZED T-SHIRT",
+    "price": 799,
+    "rating": 5,
+    "type": "t-shirt",
+    "gender": "male",
+    "image": "https://www.snitch.co.in/cdn/shop/files/4MST2255-10-M15.jpg?v=1709377882&width=1800",
+    "__v": 0
+  },
+  {
+    "_id": "6610133680e77e206fadf3ee",
+    "title": "SOLITUDE PURPLE OVERSIZED T-SHIRT",
+    "price": 1499,
+    "rating": 5,
+    "type": "t-shirt",
+    "gender": "male",
+    "image": "https://www.snitch.co.in/cdn/shop/files/4MST2255-08-M34.jpg?v=1709377796&width=1800",
+    "__v": 0
+  },
+  {
+    "_id": "66126a9b300c40cf49162196",
+    "title": "Ice Blue Baggy fit jeans",
+    "price": 1499,
+    "rating": 5,
+    "image": "https://www.snitch.co.in/cdn/shop/files/4MSD3664-03-3222.jpg?v=1712041539&width=1800",
+    "type": "jeans",
+    "gender": "male",
+    "__v": 0
+  },
+  {
+    "_id": "66126bb3963b9ac096d92ed6",
+    "title": "Baby pink checks shirt",
+    "price": 1499,
+    "rating": 5,
+    "image": "https://www.snitch.co.in/cdn/shop/files/4MSS2826-02-M31.jpg?v=1712311181&width=1800",
+    "type": "shirt",
+    "gender": "male",
+    "__v": 0
+  },
+  {
+    "_id": "6612767aec7c7e66c5442e58",
+    "title": "blue mens baggy fit jeans",
+    "price": 999,
+    "rating": 4.6,
+    "image": "https://www.snitch.co.in/cdn/shop/files/4MSD3664-01-3223.jpg?v=1708504823&width=1800",
+    "type": "jeans",
+    "gender": "male",
+    "__v": 0
+  },
+  {
+    "_id": "6612ae276512e4d23c2c0b29",
+    "title": "solitude ice gray plain t-shirt",
+    "price": 799,
+    "rating": 4,
+    "image": "https://www.snitch.co.in/cdn/shop/files/4MST2255-12-M15.jpg?v=1709378047&width=1800",
+    "type": "t-shirt",
+    "gender": "male",
+    "__v": 0
+  }
+]

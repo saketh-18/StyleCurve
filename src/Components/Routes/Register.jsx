@@ -36,7 +36,7 @@ export default function Register() {
     <p className='text-white font-semibold text-4xl'>Register</p>
       <input  placeholder='Username' value={username} onChange={(e) => {setUsername(e.target.value)}} className='p-2 rounded-md text-black focus:outline-none w-full'/>
       <input  placeholder='Password' value={password} onChange={(e) => {setPassword(e.target.value)}} className='p-2 rounded-md text-black focus:outline-none w-full'/>
-      <button onClick={parseRegister} className='bg-white text-black p-2 rounded-lg mt-2 w-full'>Register</button>
+      <button onClick={parseRegister} className='bg-white text-black p-2 rounded-lg mt-2 w-full register-button hover:bg-slate-300 focus:font-semibold focus:bg-slate-200'>Register</button>
     </div>
     </div>
     </div>
