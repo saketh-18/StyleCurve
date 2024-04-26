@@ -1,9 +1,10 @@
 import express from "express";
 import bodyParser from "body-parser";
 // import Product from './models/Product.js';
-// import User from './models/User.js';
+import User from './models/User.js';
 import cors from "cors";
 import { MongoClient } from "mongodb";
+import mongoose from "mongoose";
 
 const app = express();
 
@@ -11,7 +12,7 @@ app.use(bodyParser.json());
 
 const port = 5000;
 
-// app.use(cors({credentials : true , origin : "http://localhost:5173"}));
+app.use(cors({credentials : true , origin : "http://localhost:5173"}));
 const corsOptions = {
   origin: [
     "http://localhost:5173",
@@ -22,14 +23,14 @@ const corsOptions = {
   credentials: true, // You may need to set this if you're using cookies or sessions
 };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 app.use((req, res, next) => {
   const allowedOrigins = [
     "http://localhost:5173",
     "https://style-curve-4wnucb9sp-sakeths-projects-dbd1767a.vercel.app",
     "https://style-curve-git-master-sakeths-projects-dbd1767a.vercel.app/men",
-    "httpsstyle-curve.vercel.app",
+    "https://style-curve.vercel.app",
 
     // Add more origins as needed
   ];
@@ -49,11 +50,17 @@ app.use((req, res, next) => {
   next();
 });
 
+// mongo compass start
+
 // mongoose.connect("mongodb://localhost:27017/StyleCurve").then(() => {
 //     console.log("connected to database");
 // }).catch((e) => {
 //     console.log(e);
 // })
+
+// mongo compass end
+
+//mongo atlas  start
 
 const url =
   "mongodb+srv://sakethayinavolu:9tK3wy8L4XPrdP7z@cluster0.or4zlgp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
@@ -68,6 +75,7 @@ async function run() {
   Product = ProductCollection;
   console.log("succesfully connected to the database");
 }
+// mongo atlas end ...
 
 app.post("/postProduct", async (req, res) => {
   const { title, price, rating, image, type, gender } = req.body;
@@ -116,6 +124,7 @@ app.get("/getTees", async (req, res) => {
 });
 
 app.listen(port, async () => {
-  await run();
+  //mongo atlas
+  run();
   console.log("listening on port " + port);
 });

@@ -8,7 +8,7 @@ export default function Navbar() {
         <div className='flex items-center justify-evenly w-1/2 relative left-14 ml-4 navbar-menu'>
           <Link className='nav-item font-semibold drop-shadow-2xl text-lg hover:cursor-pointer hover:text-2xl' to={"/men"}>Men</Link>
           <p className='nav-item font-semibold drop-shadow-2xl text-lg hover:cursor-pointer hover:text-2xl'>Women</p>
-          <p className='nav-item font-semibold drop-shadow-2xl text-lg hover:cursor-pointer hover:text-2xl'>Trends</p>
+          <Link to={"/trends"} className='nav-item font-semibold drop-shadow-2xl text-lg hover:cursor-pointer hover:text-2xl'>Trends</Link>
           <Link to={"/register"} className='nav-item font-semibold drop-shadow-2xl text-lg hover:cursor-pointer hover:text-2xl'>Account</Link>
         </div>
       </div>

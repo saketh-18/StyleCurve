@@ -7,6 +7,7 @@ import AddProduct from './Components/Routes/AddProduct.jsx';
 import Register from './Components/Routes/Register.jsx';
 import Tees from './Components/Routes/Tees.jsx';
 import Login from './Components/Routes/Login.jsx';
+import Trends from './Components/Routes/Trends.jsx';
 // import Branded from './Components/Branded';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/register' element={<Register/>} />
           <Route path='/tees' element={<Tees />}/>
           <Route path='/login' element={<Login />}/>
+          <Route path='/trends' element={<Trends/>} />
         </Routes>
       </BrowserRouter>
     </>
