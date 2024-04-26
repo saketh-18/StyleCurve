@@ -1,58 +1,28 @@
-import React from 'react'
+import React from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
-export default function Trends() {
-  return (
-    <>
-      <div className="center">
-      <div className="carousel-wrapper">
-        {/* abstract radio buttons for slides */}
-        <input id="slide1" type="radio" name="controls" defaultChecked />
-        <input id="slide2" type="radio" name="controls" />
-        <input id="slide3" type="radio" name="controls" />
-        <input id="slide4" type="radio" name="controls" />
-        <input id="slide5" type="radio" name="controls" />
-
-        {/* navigation dots */}
-        <label htmlFor="slide1" className="nav-dot"></label>
-        <label htmlFor="slide2" className="nav-dot"></label>
-        <label htmlFor="slide3" className="nav-dot"></label>
-        <label htmlFor="slide4" className="nav-dot"></label>
-        <label htmlFor="slide5" className="nav-dot"></label>
-
-        {/* arrows */}
-        <label htmlFor="slide1" className="left-arrow"> {'<'} </label>
-        <label htmlFor="slide2" className="left-arrow"> {'<'} </label>
-        <label htmlFor="slide3" className="left-arrow"> {'<'} </label>
-        <label htmlFor="slide4" className="left-arrow"> {'<'} </label>
-        <label htmlFor="slide5" className="left-arrow"> {'<'} </label>
-
-        <label htmlFor="slide1" className="right-arrow"> {'>'} </label>
-        <label htmlFor="slide2" className="right-arrow"> {'>'} </label>
-        <label htmlFor="slide3" className="right-arrow"> {'>'} </label>
-        <label htmlFor="slide4" className="right-arrow"> {'>'} </label>
-        <label htmlFor="slide5" className="right-arrow"> {'>'} </label>
-
-        <div className="carousel">
-          <ul>
-            <li>
-              <img src="https://raw.githubusercontent.com/osef-art/osef-art.github.io/master/src/assets/wallpapers/canyon.jpg" alt="slide1" />
-            </li>
-            <li>
-              <img src="https://m.media-amazon.com/images/I/31Y+R3Y3nvL._SL1000_.jpg" alt="slide2" />
-            </li>
-            <li>
-              <img src="https://raw.githubusercontent.com/osef-art/ministick/main/data/img/main/ministick-clip-3.gif" alt="slide3" />
-            </li>
-            <li>
-              <img src="https://raw.githubusercontent.com/osef-art/osef-art.github.io/master/src/assets/wallpapers/smoke.jpg" alt="slide4" />
-            </li>
-            <li>
-              <img src="https://images.ctfassets.net/9l3tjzgyn9gr/photo-157575/d224d518da6c26515a470a9b7e490df8/157575-honey-bun-baby.jpg?fm=jpg&fl=progressive&q=50&w=1200" alt="slide5" />
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    </>
-  )
+class DemoCarousel extends React.Component {
+    render() {
+        return (
+          <div className='h-screen w-full'>
+            <Carousel className='w-full h-full'>
+                <div>
+                    <img src="banner2.jpg" alt="Slide 1"/>
+                    <p className="legend">Legend 1</p>
+                </div>
+                <div>
+                    <img src="banner2.jpg" alt="Slide 2" />
+                    <p className="legend">Legend 2</p>
+                </div>
+                <div>
+                    <img src="banner2.jpg" alt="Slide 3" />
+                    <p className="legend">Legend 3</p>
+                </div>
+            </Carousel>
+            </div>
+        );
+    }
 }
+
+export default DemoCarousel;
